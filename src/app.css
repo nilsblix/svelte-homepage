@@ -1,0 +1,39 @@
+:root {
+    --background: #f4f4f4;
+    --white: #ffffff;
+    --text: #111;
+    --page: #f9f9f9;
+    --secondary: #1177ff;
+    --card-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --background: #111111;
+    --text: #f9f9f9;
+    --page: #131313;
+    --card-bg: #181818;
+}
+
+html {
+    margin: 0;
+    font-family: "Menlo", "Inter", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: all 0.3s ease;
+}
+
+button {
+    font-family: inherit;
+    --height: 1rem;
+    padding: 0.5rem var(--height);
+    border-radius: var(--height);
+    background: var(--secondary);
+    border: 1px solid var(--secondary);
+    color: var(--white);
+    cursor: pointer;
+}
+
+button:hover {
+    background: transparent;
+    color: var(--secondary);
+}
