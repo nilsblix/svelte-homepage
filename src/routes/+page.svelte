@@ -49,7 +49,7 @@
 		transform: translate(-50%, 0);
 
 		width: max(50%, 500px);
-		max-width: 900px;
+		max-width: 800px;
 		height: 100vh;
 
 		z-index: -1;

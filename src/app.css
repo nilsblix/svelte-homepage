@@ -24,6 +24,7 @@ html {
 
 button {
     font-family: inherit;
+    font-size: inherit;
     --height: 1rem;
     padding: 0.5rem var(--height);
     border-radius: var(--height);
