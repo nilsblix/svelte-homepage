@@ -1,11 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount } from "svelte";
 
 	let dark = true;
 
 	const applyTheme = () => {
-		document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-		console.log('hello world!');
+		document.documentElement.dataset.theme = dark ? "dark" : "light";
 	};
 
 	const toggleDarkmode = () => {
