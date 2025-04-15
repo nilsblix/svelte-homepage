@@ -5,6 +5,11 @@
     --page: #f9f9f9;
     --secondary: #1177ff;
     --card-bg: #ffffff;
+    --light-grey: #99a3b9;
+    --dark-grey: #313131;
+
+    --active-widget: var(--secondary);
+    --inactive-widget: var(--light-grey);
 }
 
 [data-theme="dark"] {
@@ -12,6 +17,9 @@
     --text: #f9f9f9;
     --page: #131313;
     --card-bg: #181818;
+
+    --active-widget: var(--white);
+    --inactive-widget: var(--dark-grey);
 }
 
 html {

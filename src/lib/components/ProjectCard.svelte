@@ -12,6 +12,8 @@
 
 <style>
 	.card {
+		border: 1px solid red;
+
 		padding: 1.5rem;
 		border-radius: 1rem;
 		background: rgba(255, 255, 255, 0.1);

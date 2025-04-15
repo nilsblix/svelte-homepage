@@ -1,6 +1,7 @@
 <script>
 	import Header from "../lib/components/Header.svelte";
 	import Projects from "../lib/components/Projects.svelte";
+	import TiltingImage from "$lib/components/TiltingImage.svelte";
 </script>
 
 <section>
@@ -19,7 +20,8 @@
 
 		width: max(50%, 500px);
 		max-width: 800px;
-		height: 100vh;
+		/* height: 100vh; */
+		padding-bottom: 1rem;
 
 		z-index: -1;
 		background: var(--page);
@@ -27,11 +29,8 @@
 		box-shadow: 2px 8px 18px rgba(0, 0, 0, 0.3);
 	}
 
-	section > :not(.projects) {
-		margin-left: 3%;
-	}
-
 	a {
 		color: var(--secondary);
+		margin-left: 3%;
 	}
 </style>
