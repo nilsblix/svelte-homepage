@@ -25,11 +25,10 @@
 	<div class="content">
 		<div class="left">
 			<h3>Nils Blix</h3>
-			<a href="github.com/nilsblix" target="_blank">github</a>
+			<a href="https://github.com/nilsblix" target="_blank">github</a>
 		</div>
 
 		<div class="right">
-			<button on:click={() => toggleDarkmode()}>Toggle</button>
 			<ToggleSwitch
 				onSwitch={() => toggleDarkmode()}
 				left_img={sun}

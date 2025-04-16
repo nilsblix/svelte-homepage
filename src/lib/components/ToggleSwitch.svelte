@@ -11,48 +11,47 @@
 
 <button
 	on:click={() => onclick()}
-	style={`background: var(--${state == 0 ? "tertiary" : "block-bg"});`}
+	style={`
+        background: var(--${state == 0 ? "tertiary" : "card-bg"});
+        border: 1px solid var(--${state == 0 ? "tertiary" : "card-bg"});
+    `}
 >
-	<div class="imgs">
-		<div class={`icon-wrapper ${state == 0 ? "selected" : ""}`}>
-			<img src={left_img} alt="" style={`${state == 1 ? "filter: invert(1);" : ""}`} />
-		</div>
-		<div class={`icon-wrapper ${state == 1 ? "selected" : ""}`}>
-			<img src={right_img} alt="" />
-		</div>
+	<div class={`icon-wrapper ${state == 0 ? "selected" : ""}`}>
+		<img src={left_img} alt="" style={`${state == 1 ? "filter: invert(1);" : ""}`} />
+	</div>
+	<div class={`icon-wrapper ${state == 1 ? "selected" : ""}`}>
+		<img src={right_img} alt="" />
 	</div>
 </button>
 
 <style>
 	button {
-		padding: 0 8px 0 8px;
-		border-radius: 2rem;
-	}
-
-	.imgs {
-		border: 1px solid green;
-		display: flex;
-		gap: 1.5rem;
+		padding: 0 0 0 0;
 		border-radius: 1.5rem;
-		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 2px;
 	}
 
 	.icon-wrapper img {
-		width: 24px;
-		height: 24px;
+		--size: 20px;
+		width: var(--size);
+		height: var(--size);
+		transition: all 0.3s ease;
 	}
 
 	.icon-wrapper {
-		border: 1px solid pink;
 		display: flex;
+		justify-content: center;
 		align-items: center;
+
+		border-radius: 1.5rem;
+		height: 36px;
+		width: 36px;
 	}
 
 	.selected {
 		background-color: var(--white);
-		--size: 32px;
-		border-radius: var(--size);
-		width: var(--size);
-		height: var(--size);
 	}
 </style>

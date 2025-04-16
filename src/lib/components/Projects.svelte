@@ -4,7 +4,6 @@
 	import christian from "../assets/christian.png";
 	import nvim_png from "../assets/nvim.png";
 	import nix_png from "../assets/nix.png";
-	// import TiltingImage from "./TiltingImage.svelte";
 
 	const projects = {
 		xpbd: {

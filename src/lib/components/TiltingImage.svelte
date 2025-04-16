@@ -1,5 +1,6 @@
 <script>
 	export let img_src;
+	export let border_radius = "1rem";
 	let rx = 0;
 	let ry = 0;
 
@@ -11,7 +12,6 @@
 		const offsetX = e.clientX - rect.left;
 		const offsetY = e.clientY - rect.top;
 
-		// Map the position to a rotation range
 		rx = ((offsetX - centerX) / centerX) * 10; // left-right
 		ry = -((offsetY - centerY) / centerY) * 10; // up-down
 	};
@@ -27,16 +27,23 @@
 	on:mouseleave={() => {
 		resetRotation();
 	}}
-	aria-label={``}
 >
-	<img src={img_src} alt="Cool beans?" style:transform={`rotateY(${rx}deg) rotateX(${ry}deg)`} />
+	<!-- <img src={img_src} alt="" style:transform={`rotateY(${rx}deg) rotateX(${ry}deg)`} /> -->
+	<img
+		src={img_src}
+		alt=""
+		style={`
+        transform: rotateY(${rx}deg) rotateX(${ry}deg);
+        border-radius: ${border_radius};
+    `}
+	/>
 </div>
 
 <style>
 	div {
 		display: flex;
 		justify-content: center;
-		perspective: 1300px;
+		perspective: 1000px;
 		width: 100%;
 
 		margin-left: auto;
