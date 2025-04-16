@@ -59,8 +59,19 @@
 		padding-right: 1rem;
 
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+		grid-template-columns: repeat(2, minmax(220px, 1fr));
+		grid-auto-rows: auto;
 		gap: 2rem;
-		margin-top: 2rem;
+	}
+
+	@media (max-width: 1200px) {
+		.projects {
+			grid-template-columns: 100%;
+		}
+
+		:global(.project-block) {
+			grid-column: span 1 !important;
+			margin-bottom: 2rem;
+		}
 	}
 </style>

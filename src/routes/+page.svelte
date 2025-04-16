@@ -1,26 +1,24 @@
 <script>
-	import Header from "../lib/components/Header.svelte";
+	import StickyHeader from "$lib/components/StickyHeader.svelte";
 	import Projects from "../lib/components/Projects.svelte";
-	import TiltingImage from "$lib/components/TiltingImage.svelte";
 </script>
 
+<StickyHeader />
 <section>
-	<Header />
-	<a href="https://github.com/nilsblix" target="_blank">github</a>
+	<p>The one and only gnirf.</p>
 	<Projects />
 </section>
 
 <style>
 	section {
 		position: absolute;
-		top: 0;
+		top: calc(2rem + var(--stickybar-height));
 		left: 50%;
 
 		transform: translate(-50%, 0);
 
 		width: max(50%, 500px);
 		max-width: 800px;
-		/* height: 100vh; */
 		padding-bottom: 1rem;
 
 		z-index: -1;
@@ -29,8 +27,7 @@
 		box-shadow: 2px 8px 18px rgba(0, 0, 0, 0.3);
 	}
 
-	a {
-		color: var(--secondary);
+	p {
 		margin-left: 3%;
 	}
 </style>
