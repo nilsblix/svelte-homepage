@@ -15,7 +15,7 @@
 </section>
 
 <section>
-	<p>The one and only gnirf.</p>
+	<p>The one and only gnurf. Keep! Gnorfland! Pure! I am the abra-gnurk.</p>
 	<Projects />
 </section>
 

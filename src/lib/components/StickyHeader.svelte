@@ -17,7 +17,15 @@
 	};
 
 	onMount(() => {
+		const mediaquery = window.matchMedia("(prefers-color-scheme: dark)");
+		dark = mediaquery.matches;
+
 		applyTheme();
+
+		mediaquery.addEventListener("change", (e) => {
+			dark = e.matches;
+			applyTheme();
+		});
 	});
 </script>
 
