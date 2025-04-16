@@ -5,7 +5,7 @@
 	import moon from "../assets/moon.svg";
 	import sun from "../assets/sun.svg";
 
-	let dark = true;
+	let dark = false;
 
 	const applyTheme = () => {
 		document.documentElement.dataset.theme = dark ? "dark" : "light";

@@ -14,41 +14,45 @@
 	style={`background: var(--${state == 0 ? "tertiary" : "block-bg"});`}
 >
 	<div class="imgs">
-		<img
-			class={state == 0 ? "selected" : ""}
-			src={left_img}
-			alt=""
-			style={`${state == 1 ? "filter: invert(1);" : ""}`}
-		/>
-		<img class={state == 1 ? "selected" : ""} src={right_img} alt="" />
+		<div class={`icon-wrapper ${state == 0 ? "selected" : ""}`}>
+			<img src={left_img} alt="" style={`${state == 1 ? "filter: invert(1);" : ""}`} />
+		</div>
+		<div class={`icon-wrapper ${state == 1 ? "selected" : ""}`}>
+			<img src={right_img} alt="" />
+		</div>
 	</div>
-	<!-- <span class="toggle" style={`left: ${state == 0 ? "1rem" : "3rem"};`}></span> -->
 </button>
 
 <style>
 	button {
-		border: 1px solid red;
+		padding: 0 8px 0 8px;
+		border-radius: 2rem;
 	}
 
 	.imgs {
 		border: 1px solid green;
 		display: flex;
-		gap: 1rem;
+		gap: 1.5rem;
 		border-radius: 1.5rem;
+		width: 100%;
 	}
 
-	/* .toggle { */
-	/* 	background-color: var(--white); */
-	/* 	--size: 1.1rem; */
-	/* 	width: var(--size); */
-	/* 	height: var(--size); */
-	/* } */
-
-	img {
-		width: 16px;
+	.icon-wrapper img {
+		width: 24px;
+		height: 24px;
 	}
 
-	img .selected {
+	.icon-wrapper {
+		border: 1px solid pink;
+		display: flex;
+		align-items: center;
+	}
+
+	.selected {
 		background-color: var(--white);
+		--size: 32px;
+		border-radius: var(--size);
+		width: var(--size);
+		height: var(--size);
 	}
 </style>
