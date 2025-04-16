@@ -1,5 +1,7 @@
 import adapter from '@sveltejs/adapter-static';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 export default {
     kit: {
         adapter: adapter({
@@ -12,7 +14,7 @@ export default {
             strict: true
         }),
         paths: {
-            base: process.argv.includes("dev") ? "" : "/svelte-homepage"
+            base: isDev ? "" : "/svelte-homepage"
         }
     }
 };
